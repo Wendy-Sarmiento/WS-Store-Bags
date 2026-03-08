@@ -62,7 +62,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           alt={product.name}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover transition-all duration-700 group-hover:scale-110"
+          className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:animate-[img-pulse_2.5s_ease-in-out_infinite]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
