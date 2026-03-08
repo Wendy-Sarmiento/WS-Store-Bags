@@ -310,11 +310,9 @@ export default function HeroScroll() {
         {/* Loading skeleton — logo pulse while frames load */}
         {!loaded && (
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white">
-            <img
-              src="/logo-cropped.webp"
-              alt=""
-              className="w-28 opacity-40 animate-pulse"
-            />
+            <span className="font-[family-name:var(--font-playfair)] text-xl font-bold tracking-[0.1em] uppercase text-[var(--color-ink)] opacity-30 animate-pulse">
+              Wendy Sarmiento
+            </span>
             <div className="mt-6 w-32 h-0.5 rounded-full bg-[var(--color-border)] overflow-hidden">
               <div className="h-full w-1/3 rounded-full bg-[var(--color-cyan)] animate-[shimmer_1.5s_ease-in-out_infinite]" />
             </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useCartStore } from "@/store/cartStore";
 import { useEffect, useState } from "react";
 
@@ -34,16 +33,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="relative h-10 w-32 block">
-            <Image
-              src="/logo-cropped.webp"
-              alt="Wendy Sarmiento"
-              fill
-              className={`object-contain object-left transition-all duration-500 ${
-                scrolled ? "" : "brightness-0 invert"
-              }`}
-              priority
-            />
+          <a
+            href="#"
+            className={`font-[family-name:var(--font-playfair)] font-bold tracking-[0.08em] uppercase leading-tight text-center transition-colors duration-500 ${
+              scrolled ? "text-[var(--color-ink)]" : "text-white"
+            }`}
+          >
+            <span className="block text-[15px]">Wendy</span>
+            <span className="block text-[11px] tracking-[0.18em]">Sarmiento</span>
           </a>
 
           <div className="flex items-center gap-3">
