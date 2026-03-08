@@ -114,7 +114,7 @@ export default function CartDrawer() {
                             item.quantity - 1
                           )
                         }
-                        className="w-7 h-7 rounded-full border border-[var(--color-border)] flex items-center justify-center text-sm hover:bg-[var(--color-border)] transition-colors"
+                        className="w-9 h-9 rounded-full border border-[var(--color-border)] flex items-center justify-center text-sm hover:bg-[var(--color-border)] transition-colors"
                       >
                         -
                       </button>
@@ -128,7 +128,7 @@ export default function CartDrawer() {
                             item.quantity + 1
                           )
                         }
-                        className="w-7 h-7 rounded-full border border-[var(--color-border)] flex items-center justify-center text-sm hover:bg-[var(--color-border)] transition-colors"
+                        className="w-9 h-9 rounded-full border border-[var(--color-border)] flex items-center justify-center text-sm hover:bg-[var(--color-border)] transition-colors"
                       >
                         +
                       </button>

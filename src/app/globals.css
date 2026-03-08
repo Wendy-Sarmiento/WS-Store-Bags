@@ -77,3 +77,11 @@ body {
   scroll-margin-top: 5rem;
 }
 
+/* Disable hover animations on touch devices */
+@media (hover: none) {
+  .group:hover img {
+    transform: none !important;
+    animation: none !important;
+  }
+}
+

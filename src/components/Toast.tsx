@@ -30,7 +30,7 @@ export default function Toast() {
 
   return (
     <div
-      className={`fixed bottom-6 left-1/2 z-[60] flex items-center gap-3 px-5 py-3.5 rounded-2xl transition-all duration-500 ${
+      className={`fixed bottom-6 left-1/2 z-[60] flex items-center gap-3 px-5 py-3.5 rounded-2xl max-w-[calc(100vw-2rem)] transition-all duration-500 ${
         exiting
           ? "opacity-0 translate-y-4 scale-95 -translate-x-1/2"
           : "opacity-100 translate-y-0 scale-100 -translate-x-1/2"

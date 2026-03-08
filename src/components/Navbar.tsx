@@ -43,11 +43,11 @@ export default function Navbar() {
             <span className="block text-[11px] tracking-[0.18em]">Sarmiento</span>
           </a>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1 sm:gap-3">
             {/* Currency toggle */}
             <button
               onClick={toggleCurrency}
-              className={`text-xs font-semibold px-2.5 py-1 rounded-full border transition-all duration-500 ${
+              className={`text-xs font-semibold px-3 py-2.5 rounded-full border transition-all duration-500 ${
                 scrolled
                   ? "border-black/15 text-[rgba(0,0,0,0.8)] hover:border-[var(--color-cyan)]"
                   : "border-white/40 text-white hover:border-white/70"
@@ -59,7 +59,7 @@ export default function Navbar() {
             {/* Cart button */}
             <button
               onClick={toggle}
-              className={`relative p-2 rounded-full transition-all duration-500 ${
+              className={`relative p-2.5 rounded-full transition-all duration-500 ${
                 scrolled
                   ? "text-[rgba(0,0,0,0.8)] hover:bg-black/5"
                   : "text-white hover:bg-white/10"

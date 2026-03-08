@@ -61,18 +61,18 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           src={product.image}
           alt={product.name}
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:animate-[img-pulse_2.5s_ease-in-out_infinite]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-        {/* Add to cart overlay button */}
+        {/* Add to cart overlay button — always visible on mobile, hover-only on desktop */}
         <button
           onClick={handleAdd}
-          className={`absolute bottom-4 left-4 right-4 py-3 backdrop-blur-sm text-sm font-semibold rounded-xl translate-y-3 transition-all duration-300 active:scale-95 ${
+          className={`absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 py-3 backdrop-blur-sm text-sm font-semibold rounded-xl transition-all duration-300 active:scale-95 ${
             added
               ? "bg-[var(--color-cyan)] text-white opacity-100 translate-y-0 shadow-lg shadow-[var(--color-cyan)]/25"
-              : "bg-white/90 text-[var(--color-ink)] opacity-0 group-hover:opacity-100 group-hover:translate-y-0 hover:bg-[var(--color-ocean)] hover:text-white hover:shadow-lg hover:shadow-[var(--color-ocean)]/30"
+              : "bg-white/90 text-[var(--color-ink)] opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-3 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 hover:bg-[var(--color-ocean)] hover:text-white hover:shadow-lg hover:shadow-[var(--color-ocean)]/30"
           }`}
         >
           {added ? "Agregado" : "Agregar al carrito"}

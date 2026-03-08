@@ -298,10 +298,10 @@ export default function HeroScroll() {
         {/* Overlay text — inverted colors + fade out on scroll */}
         <div className="hero-text-container absolute inset-0 flex flex-col items-center justify-center pointer-events-none mix-blend-difference">
           <div className="text-center px-4">
-            <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 opacity-0 text-white">
+            <h1 className="hero-title text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4 opacity-0 text-white">
               Wendy Sarmiento
             </h1>
-            <p className="hero-subtitle text-lg md:text-2xl font-bold tracking-[0.25em] uppercase opacity-0 text-white">
+            <p className="hero-subtitle text-sm sm:text-lg md:text-2xl font-bold tracking-[0.25em] uppercase opacity-0 text-white">
               Arte tejido a mano
             </p>
           </div>

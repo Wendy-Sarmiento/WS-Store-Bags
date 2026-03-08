@@ -116,16 +116,16 @@ export default function CTASection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-36 text-center overflow-hidden">
+    <section ref={sectionRef} className="relative py-20 md:py-36 text-center overflow-hidden">
       {/* Background: product collage */}
-      <div className="cta-collage absolute inset-0 grid grid-cols-3 gap-0">
+      <div className="cta-collage absolute inset-0 grid grid-cols-2 md:grid-cols-3 gap-0">
         {[1, 2, 3, 4, 5, 6].map((n) => (
           <div key={n} className="relative overflow-hidden">
             <Image
               src={`/products/bag${n}.webp`}
               alt=""
               fill
-              sizes="33vw"
+              sizes="(max-width: 768px) 50vw, 33vw"
               className="object-cover scale-110"
               loading="lazy"
             />
@@ -155,7 +155,7 @@ export default function CTASection() {
 
       {/* Soft top edge — blends white section above into the CTA */}
       <div
-        className="absolute inset-x-0 top-0 h-36 pointer-events-none z-20"
+        className="absolute inset-x-0 top-0 h-20 md:h-36 pointer-events-none z-20"
         style={{
           background:
             "linear-gradient(to bottom, white 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0) 100%)",
@@ -163,18 +163,18 @@ export default function CTASection() {
       />
 
       {/* Content */}
-      <div className="cta-content relative max-w-2xl mx-auto px-4 z-30">
-        <h2 className="cta-title text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+      <div className="cta-content relative max-w-2xl mx-auto px-6 z-30">
+        <h2 className="cta-title text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-3 md:mb-4 drop-shadow-lg">
           ¿Lista para tu bolso único?
         </h2>
-        <p className="cta-desc text-white/85 mb-10 text-lg drop-shadow">
+        <p className="cta-desc text-white/85 mb-6 md:mb-10 text-base md:text-lg drop-shadow">
           Escríbenos por WhatsApp y te asesoramos en tu elección perfecta.
         </p>
         <a
           href="https://wa.me/573006313294?text=Hola%20Wendy!%20Me%20interesa%20conocer%20tu%20colecci%C3%B3n%20de%20bolsos."
           target="_blank"
           rel="noopener noreferrer"
-          className="cta-button inline-flex items-center gap-2 px-8 py-4 font-bold rounded-full text-lg text-white border border-white/25 transition-all duration-500 ease-out hover:scale-105 hover:border-white/60 hover:shadow-[0_0_30px_rgba(255,255,255,0.25),0_8px_32px_rgba(0,80,158,0.3)] active:scale-95"
+          className="cta-button inline-flex items-center gap-2 px-6 py-3.5 md:px-8 md:py-4 font-bold rounded-full text-base md:text-lg text-white border border-white/25 transition-all duration-500 ease-out hover:scale-105 hover:border-white/60 hover:shadow-[0_0_30px_rgba(255,255,255,0.25),0_8px_32px_rgba(0,80,158,0.3)] active:scale-95"
           style={{
             backgroundColor: "rgba(255,255,255,0.15)",
             backdropFilter: "blur(12px)",
