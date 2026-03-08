@@ -18,6 +18,7 @@ interface CartState {
   items: CartItem[];
   isOpen: boolean;
   currency: "COP" | "USD";
+  lastAdded: string | null;
   open: () => void;
   close: () => void;
   toggle: () => void;
@@ -25,6 +26,7 @@ interface CartState {
   addItem: (product: Product) => void;
   removeItem: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
+  clearLastAdded: () => void;
   totalItems: () => number;
   totalPrice: () => number;
   formatPrice: (cop: number, usd: number) => string;
@@ -35,6 +37,7 @@ export const useCartStore = create<CartState>((set, get) => ({
   items: [],
   isOpen: false,
   currency: "COP",
+  lastAdded: null,
 
   open: () => set({ isOpen: true }),
   close: () => set({ isOpen: false }),
@@ -47,6 +50,7 @@ export const useCartStore = create<CartState>((set, get) => ({
       const existing = state.items.find((i) => i.product.id === product.id);
       if (existing) {
         return {
+          lastAdded: product.name,
           items: state.items.map((i) =>
             i.product.id === product.id
               ? { ...i, quantity: i.quantity + 1 }
@@ -54,8 +58,10 @@ export const useCartStore = create<CartState>((set, get) => ({
           ),
         };
       }
-      return { items: [...state.items, { product, quantity: 1 }] };
+      return { lastAdded: product.name, items: [...state.items, { product, quantity: 1 }] };
     }),
+
+  clearLastAdded: () => set({ lastAdded: null }),
 
   removeItem: (productId) =>
     set((state) => ({
