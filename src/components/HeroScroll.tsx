@@ -257,7 +257,7 @@ export default function HeroScroll() {
 
   return (
     <div ref={containerRef} className="h-[500vh] relative">
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden bg-[var(--color-ink)]">
+      <div className="sticky top-0 h-dvh flex items-center justify-center overflow-hidden bg-[var(--color-ink)]">
         {/* Canvas wrapper for scale + blur dissolve */}
         <div className="hero-canvas-wrap w-full h-full">
           <canvas
@@ -265,7 +265,7 @@ export default function HeroScroll() {
             className={`w-full h-full object-cover transition-opacity duration-700 ${
               loaded ? "opacity-100" : "opacity-0"
             }`}
-            style={{ maxHeight: "100vh" }}
+            style={{ maxHeight: "100dvh" }}
           />
         </div>
 
