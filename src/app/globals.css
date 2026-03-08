@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* 60% — Fondos */
+  --color-bg: #FFFFFF;
+  --color-bg-warm: #F8F9FA;
+
+  /* 30% — Identidad (Azules del bolso) */
+  --color-cyan: #00A8E8;
+  --color-ocean: #00509E;
+
+  /* 10% — Texto */
+  --color-ink: #0A0A0A;
+  --color-ink-soft: #333333;
+
+  /* Auxiliares */
+  --color-border: #E5E7EB;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Font */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Reset suave */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+/* Utility: texto sobre canvas con legibilidad */
+.text-over-canvas {
+  mix-blend-mode: difference;
+  color: white;
+}
+
+.text-over-canvas-blur {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Scrollbar minimal */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
