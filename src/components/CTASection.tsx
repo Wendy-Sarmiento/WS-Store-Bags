@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 export default function CTASection() {
@@ -120,11 +121,12 @@ export default function CTASection() {
       <div className="cta-collage absolute inset-0 grid grid-cols-3 gap-0">
         {[1, 2, 3, 4, 5, 6].map((n) => (
           <div key={n} className="relative overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={`/products/bag${n}.webp`}
               alt=""
-              className="w-full h-full object-cover scale-110"
+              fill
+              sizes="33vw"
+              className="object-cover scale-110"
               loading="lazy"
             />
           </div>
